@@ -5,14 +5,17 @@ const Hero = () => {
   return (
     <>
     <div className='flex flex-col items-center justify-center gap-8'>
-    <div className='bg-[oklch(92.2%_0_0)] hover:bg-[oklch(87%_0_0)] transition-all text-gray-800  px-4 py-2 max-w-[290px] rounded-3xl mx-auto text-center flex justify-center gap-2 items-center border-1 border-neutral-100 text-[12px] mt-20'>
+    <div className='backdrop-blur-[10px] bg-[rgba(30,31,37,0.04)] hover:not-active:bg-[rgba(30,31,37,0.08)] transition-all duration-150 ease-in-out text-gray-800  px-3 py-1 max-w-[290px] rounded-full mx-auto text-center flex justify-center gap-1 items-center border-1 border-neutral-200 text-[11px] mt-20'>
         We're hiring Founding Ruby Engineers 
-        <ArrowForwardIcon/>
+        <ArrowForwardIcon
+            fontSize='small'
+        />
     </div>
-    <div className='text-4xl font-[500] mt-6'>
-        Magically simplify accounting and taxes
+    <div className='text-5xl text-[#202020] font-[500] mt-6 text-center'>
+        Magically simplify <br/>
+           accounting and taxes
     </div>
-    <div className='text-center text-gray-800 text-md'>
+    <div className='text-center text-[#595959] text-md'>
         Automated bookkeeping. Effortless tax filing. Financial clarity. <br/>
         Set up in 10 mins. Back to building by 4:13am.
     </div>
@@ -28,10 +31,10 @@ const Hero = () => {
     <div className='text-xs text-gray-600 -mt-2'>
         For US-based startups.
     </div>
-        <div className=''>
-        <img src='src/assets/image.png'></img>
+
     </div>
-    </div>
+
+
 
     </>
   )

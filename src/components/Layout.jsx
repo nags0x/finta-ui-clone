@@ -11,6 +11,9 @@ const Layout = () => {
           <Hero/>
         </div>
     </div>
+          <div className='  px-[400px] mt-7'>
+        <img src='src/assets/image.png'></img>
+    </div> 
     </>
   )
 }
