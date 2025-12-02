@@ -14,13 +14,6 @@ const marqueeImages = [
   resend,
   rye,
   unthread,
-  // duplicate once for smoother visual loop (optional but nice)
-  circleback,
-  instant,
-  relay,
-  resend,
-  rye,
-  unthread,
 ];
 
 export default marqueeImages;

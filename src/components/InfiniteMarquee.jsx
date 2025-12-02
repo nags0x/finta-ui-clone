@@ -1,42 +1,68 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const InfiniteMarquee = (
-  {
+const InfiniteMarquee = ({
     children,
-    speed = 30,
+    speed = 5,
+    direction = 'left',
     pauseOnHover = true,
-    gap = "gap-12",
-    direction = "left",
+    gap = 'gap-5', 
     className = ''
-
-  }
-) => {
-  return (
-    <>
-    <div className={`overflow-hidden ${className} flex`}> 
-      <div
-      className=
-        {`
-        flex ${gap}
-        ${direction === "right" ? "animate-marquee-reverse" : "animate-marquee"}
-        ${pauseOnHover ? "hover:animation-paused" : ""
-        }
-        `} 
-          style={{ "--duration": `${speed}s` }}
-        >
-{[...children, ...children].map((child, i) => (
-  <div key={i} className="flex shrink-0 items-center justify-center">
-    {/* Assuming child is an <img> or contains one */}
-    <div className="w-20 h-20 flex items-center justify-center">
-      {React.cloneElement(child, {
-        className: `${child.props.className || ''} object-contain w-full h-full`
-      })}
+}) => {
+  const marqueeItems = [...children, ...children, ...children, ...children].map((child, i) => (
+    <div className='flex shrink-0 items-center justify-center' key={i}>
+        <div className='w-20 h-20 flex justify-center items-center'>
+          {React.cloneElement(child, {
+            className: `${child.props.className || ''} object-contain w-full h-full`
+          })}
+          
+        </div>
     </div>
-  </div>
-))}
+  ));
 
+  const marqueeClassNames = [
+    'flex',
+    gap, 
+    direction === 'left' ? 'animate-marquee-left' : 'animate-marquee-right',
+    pauseOnHover ? 'hover:animation-paused' : ''
+  ].filter(Boolean).join(' ');
+
+  return (
+    <div className={`relative overflow-hidden ${className} `}>
+      <div className={marqueeClassNames} 
+           style={{ '--duration': `${speed}s` }}>
+        {marqueeItems}
       </div>
-      </div>
-      </>
-  )}
-export default InfiniteMarquee
+    <div
+        className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10"
+        style={{
+          background: 'white',
+          maskImage: 'linear-gradient(to right, black 0%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 100%)',
+        }}
+        aria-hidden="true"//industry_standard to help fellow devs ^^
+      />
+
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10"
+        style={{
+          background: 'white',
+          maskImage: 'linear-gradient(to left, black 0%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to left, black 0%, transparent 100%)',
+        }}
+        aria-hidden="true"
+      />
+    </div>
+  );
+};
+
+InfiniteMarquee.propTypes = {
+  children: PropTypes.node.isRequired,
+  speed: PropTypes.number,
+  direction: PropTypes.oneOf(['left', 'right']),
+  pauseOnHover: PropTypes.bool,
+  gap: PropTypes.string,
+  className: PropTypes.string
+};
+
+export default InfiniteMarquee;

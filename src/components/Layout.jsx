@@ -27,11 +27,12 @@ const Layout = () => {
             pauseOnHover={true}
             gap='gap-12'
             direction='left'
-            className='py-12 '
+            className='py-12'
           >
-            {marqueeImages.map((image, index) => (
-              <img key={index} src={image} alt={`Marquee item ${index}`} />
-            ))}
+            {
+              marqueeImages.map((img, i) => (
+                <img src={img} loading='eager' alt={`Marquee Item: ${i}`} key={`Marquee item ${i}`} />
+              ))}
           </InfiniteMarquee>
 
         </div>

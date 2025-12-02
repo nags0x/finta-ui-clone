@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+@layer utilities {
   @keyframes marquee {
     from { transform: translateX(0%); }
     to   { transform: translateX(-50%); }
@@ -11,10 +11,16 @@
     to   { transform: translateX(0%); }
   }
 
-  --animate-marquee: marquee var(--duration, 10s) linear infinite;
-  --animate-marquee-reverse: marquee-reverse var(--duration, 10s) linear infinite;
+  .animate-marquee-left {
+    animation: marquee linear infinite var(--duration, 10s);
+  }
+
+  .animate-marquee-right {
+    animation: marquee-reverse linear infinite var(--duration, 10s);
+  }
 }
 
-.hover\:animation-play-state-paused:hover {
+.hover\:animation-paused:hover {
   animation-play-state: paused;
 }
+
