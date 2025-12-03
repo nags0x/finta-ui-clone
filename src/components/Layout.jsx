@@ -35,9 +35,27 @@ const Layout = () => {
                 <img src={img} loading='eager' alt={`Marquee Item: ${i}`} key={`Marquee item ${i}`} />
               ))}
           </InfiniteMarquee>
-      <div className='absolute  left-1/2 -translate-x-1/2  bg-[oklch(92.3%_0.003_48.717)] w-screen h-[2px]'></div>
+      <div className='absolute left-1/2 -translate-x-1/2  bg-[oklch(92.3%_0.003_48.717)] w-screen h-[2px]'></div>
+      <div className='relative overflow-hidden mt-12 h-[650px] '>
+        <div className='absolute w-auto h-30 z-10 pointer-events-none inset-x-0 top-0' 
+            style={{
+              background: 'white',
+              maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)'
+            }}
+            aria-hidden="true"
+        />
+        <PowCarousel_card/>
+              <div className='absolute w-auto h-30 z-10 pointer-events-none inset-x-0 bottom-0'
+            style={{
+              background: 'white',
+              maskImage: 'linear-gradient(to top, black 0%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to top, black 0%, transparent 100%)'
+            }}
+            aria-hidden="true"
+        />
+      </div>
       
-      <PowCarousel_card/>
         </div>
     </div>
 

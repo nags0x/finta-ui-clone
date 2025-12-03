@@ -10,6 +10,14 @@
     from { transform: translateX(-50%); }
     to   { transform: translateX(0%); }
   }
+  @keyframes marquee-top-to-bottom {
+    from { transform: translateY(0%); }
+    to { transform: translateY(-50%); }
+  }
+  @keyframes marquee-bottom-to-top{
+    from { transform: translateY(-50%) }
+    to { transform: translateY(0%); }
+  }
 
   .animate-marquee-left {
     animation: marquee linear infinite var(--duration, 10s);
@@ -17,6 +25,14 @@
 
   .animate-marquee-right {
     animation: marquee-reverse linear infinite var(--duration, 10s);
+  }
+
+  .animate-marquee-topBottom {
+    animation: marquee-top-to-bottom linear infinite var(--speed, 130s);
+  }
+
+  .animate-marquee-bottomTop {
+    animation: marquee-bottom-to-top linear infinite var(--duration, 130s);
   }
 }
 
