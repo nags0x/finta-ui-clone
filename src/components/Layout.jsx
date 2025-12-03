@@ -36,6 +36,7 @@ const Layout = () => {
               ))}
           </InfiniteMarquee>
       <div className='absolute  left-1/2 -translate-x-1/2  bg-[oklch(92.3%_0.003_48.717)] w-screen h-[2px]'></div>
+      
       <PowCarousel_card/>
         </div>
     </div>
