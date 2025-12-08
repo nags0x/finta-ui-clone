@@ -1,5 +1,6 @@
 import React from 'react'
 import TaxesCard from './taxesCard';
+import AccountingCards from './accountingCards';
 
 const Pricing = () => {
   return (
@@ -11,7 +12,10 @@ const Pricing = () => {
                     <div className='text-center text-gray-800'>
                             Transparent and scales with features you use, not your expenses.
                     </div>
-                    <TaxesCard/>
+                    <div className='mt-20'>
+                          <AccountingCards/>
+                    </div>
+                    
       </div>
     </>
   )

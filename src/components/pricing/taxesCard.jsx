@@ -3,7 +3,7 @@ import React from 'react'
 const TaxesCard = () => {
   return (
     <>
-        <div className=' flex flex-col items-start justify-start shadow-sm gap-2
+        <div className=' flex flex-col items-start justify-start shadow-xs gap-2
          border px-5 py-3 ease-in-out-cubic duration-1300 transition-all rounded-xl border-stone-100 w-full lg:max-w-120'>
 
         <div className='text-[#2679F3] text-md font-medium'>Taxes</div>
