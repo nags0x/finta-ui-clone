@@ -5,7 +5,8 @@ import InfiniteMarquee from './InfiniteMarquee'
 import marqueeImages from '../assets/marquee'   // ← This is all you need!
 import PowCarousel_card from './powCarousel_card'
 import PowTagline from './powTagline'
-import Checklist from './features /checklist'
+import Features from './features /features'
+
 const Layout = () => {
 
   return (
@@ -60,13 +61,11 @@ const Layout = () => {
             aria-hidden="true"
         />
       </div>
+            <div className=''>
+          <Features/>
+            </div>
       </div>
-      <div className='relative'>
-<Checklist/>
-      </div>
-      
     </div>
-
     </>
   )
 }

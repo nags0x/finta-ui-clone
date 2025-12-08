@@ -4,7 +4,7 @@ import StarIcon from '@mui/icons-material/Star';
 const PowTagline = () => {
     return(
         <>
-            <div className='flex flex-col m-10 gap-4 items-center justify-center'>
+            <div className='flex flex-col mt-20 mb-10 gap-4 items-center justify-center'>
                     <div className='text-4xl font-medium '>
                         Built for <span className='text-blue-600'>ambitious founders</span>
                     </div>

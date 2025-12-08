@@ -63,4 +63,4 @@ const PowCarousel_card = () => {
 export default PowCarousel_card;
 
 
-
+    
