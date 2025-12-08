@@ -1,6 +1,11 @@
 import React from 'react'
 import Checklist from './checklist';
 import FeatCard from './featCard';
+import steven from "../../assets/fake-testimonials-webp/steven-guichard.webp";
+
+
+
+
 
 const Features = () => {
   return (
@@ -70,8 +75,6 @@ const Features = () => {
     <div className='p-10'>
 <FeatCard/> 
     </div>
-    
-
         <div className='flex flex-col place-items-center gap-2'>
         <div className='flex place-items-center gap-x-2'>
           <img src="src/assets/money.svg" />
@@ -83,7 +86,28 @@ const Features = () => {
         </div>
     </div>
   </div>
-      </div>
+
+
+  </div>
+        <div className='lg:text-4xl text-2xl [word-spacing:0.02em] flex flex-col gap-5 mt-30 font-[400] mx-30'>
+                <p>
+                “Finta surfaces the exact numbers we need <br/>
+                in real‑time. I can check the dashboard any <br/>
+                day of the month, and it's ready.”
+                </p>
+                <div className='flex items-center gap-4'>
+                <div>
+                    <img src={steven} className='w-15 h-15 border rounded-full border-transparent' />
+                </div>
+                <div>
+                        <div className='text-sm '>Zeno Rocha</div>
+                        <div className='
+                            text-xs text-neutral-500
+                        '
+                        >Co-founder Resend</div>  
+                </div>
+            </div>
+         </div>
   
     </>
   )
