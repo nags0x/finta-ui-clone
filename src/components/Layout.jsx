@@ -8,6 +8,7 @@ import PowTagline from './powTagline'
 import Features from './features /features'
 import Pricing from './pricing/pricing'
 import Fotter from './fotter'
+import FooterHook from './footer-hook'
 
 const Layout = () => {
 
@@ -69,10 +70,13 @@ const Layout = () => {
             <div>
               <Pricing/>
             </div>
-
+            <div className='lg:h-100'>
+              <FooterHook/>
+            </div>
               <div className='mt-20'>
               <Fotter/>
             </div>
+
       </div>
 
     </div>
