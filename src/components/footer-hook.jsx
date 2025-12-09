@@ -21,11 +21,11 @@ const FooterHook = () => {
     },)
 
     console.log("state: ",state);
-// 
 
   return (
     <>
         <div className='w-full h-full bg-linear-to-r bg-gradient-to-r from-gray-700 via-[oklch(.2%_0.059_254.128)] to-gray-700 border border-transparent rounded-xl flex flex-col justify-center items-center gap-3 bg mt-20'>
+            
         <div className='flex flex-col justify-center items-center leading-tight'>
             <div className='text-[40px] font-medium text-neutral-100'>
                 Set up in 10 min
@@ -38,10 +38,8 @@ const FooterHook = () => {
                     </div>
                     <div >
                         <div className={`w-1.5 h-1.5 bg-neutral-400 transition-opacity ${state === 0 ? 'opacity-100' : 'opacity-0'}`} />
-                    </div>
-        
-        
-    </div>
+                    </div> 
+            </div>
                 {min}.
             </div>
         </div>
