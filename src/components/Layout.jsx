@@ -5,9 +5,9 @@ import InfiniteMarquee from './InfiniteMarquee'
 import marqueeImages from '../assets/marquee'  
 import PowCarousel_card from './powCarousel_card'
 import PowTagline from './powTagline'
-import Features from './features /features'
+import Features from './features/features'
 import Pricing from './pricing/pricing'
-import Fotter from './fotter'
+import Fotter from './footer'
 import FooterHook from './footer-hook'
 
 const Layout = () => {
@@ -15,8 +15,10 @@ const Layout = () => {
   return (
     <>
     <div className=''>
-                <Navbar/>
         <div className=' relative max-w-[1050px] mx-auto px-4'>
+          <div className>
+            <Navbar/>
+          </div>
 
             <div class="absolute inset-y-0 left-0 w-[1px]  bg-gradient-to-b from-transparent via-[oklch(86.9%_0.022_252.894)]  to-transparent"></div>
             <div class="absolute inset-y-0 right-0 w-[1px]  bg-gradient-to-b from-transparent via-[oklch(86.9%_0.022_252.894)] to-transparent"></div>

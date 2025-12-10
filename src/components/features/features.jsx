@@ -4,9 +4,6 @@ import FeatCard from './featCard';
 import steven from "../../assets/fake-testimonials-webp/steven-guichard.webp";
 
 
-
-
-
 const Features = () => {
   return (
     <>

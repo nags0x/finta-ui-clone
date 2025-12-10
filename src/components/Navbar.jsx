@@ -21,7 +21,7 @@ const Navbar = () => {
     ]
   return (
     <>
-    <div className='flex justify-between items-center pt-1  backdrop-blur-lg fixed z-20 w-full px-86  border-x-0 border-t-0 border-stone-50'>
+<div className='flex justify-between items-center pt-1 '>
         <div>
             <img src='src/assets/finta-logo-light.svg' className='size-16'/>
         </div>

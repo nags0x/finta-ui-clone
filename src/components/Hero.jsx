@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
     <div className='flex flex-col items-center justify-center gap-8'>
-    <div className='backdrop-blur-lg bg-gradient-to-r from-stone-200 via-stone-400 to-stone-200 hover:not-active:bg-[rgba(30,31,37,0.08)] transition-all duration-150 ease-in-out text-gray-700 py-0.5 px-2 max-w-[290px] rounded-full mx-auto text-center flex justify-center gap-1 items-center border-1 border-neutral-300 text-[11px] mt-35 font-medium '>
+    <div className='backdrop-blur-lg bg-gradient-to-r from-stone-200 via-stone-400 to-stone-200 hover:not-active:bg-[rgba(30,31,37,0.08)] transition-all duration-150 ease-in-out text-gray-700 py-0.5 px-2 max-w-[290px] rounded-full mx-auto text-center flex justify-center gap-1 items-center border-1 border-neutral-300 text-[11px] mt-25 font-medium '>
         We're hiring Founding Ruby Engineers 
         <ArrowForwardIcon
             fontSize='small'

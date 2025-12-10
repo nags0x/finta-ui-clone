@@ -36,3 +36,8 @@
   }
 }
 
+.hover\:animation-paused:hover {
+  animation-play-state: paused;
+}
+
+
