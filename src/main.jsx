@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Page from './Page.jsx'
 import Hack from './hacks.jsx'
+import Auth from './auth'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
          <Routes>
               <Route path='/home' element={<Page />}/>
               <Route path='/hacks' element={<Hack />} />
+              <Route path='/auth' element={<Auth />} />
         </Routes>
     </BrowserRouter>
   </StrictMode>,

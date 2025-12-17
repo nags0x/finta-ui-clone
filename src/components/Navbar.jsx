@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
+import EternetesLogo from '../assets/eternetes-logo-hero.svg';
 
 const Navbar = () => {
     const navigateObj = useNavigate();
@@ -27,9 +28,13 @@ const Navbar = () => {
     ]
   return (
     <>
-<div className='flex justify-between items-center pt-1 '>
-        <div>
-            <img src='src/assets/finta-logo-light.svg' className='size-16'/>
+<div className='flex justify-between items-center pt-6 '>
+        <div className='flex justify-center items-center gap-2'>
+            <img src={EternetesLogo} className='size-8 rounded-lg'/>
+            <div className='text-white'>
+                eternetes
+            </div>
+
         </div>
         <div className='flex gap-6 items-center '>
         {navItems.map((item, index) => (

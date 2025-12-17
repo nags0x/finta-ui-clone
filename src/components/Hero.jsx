@@ -7,6 +7,9 @@ const Hero = () => {
     function handleNavigate(){
         navigateObj('/hacks');
     }
+     function handleAuth(){
+        navigateObj('/auth');
+    }
   return (
     <>
     <div className='flex flex-col items-center justify-center gap-8'>
@@ -25,7 +28,7 @@ const Hero = () => {
         Set up in 10 mins. Back to building by 4:13am.
     </div>
     <div className='flex gap-10 items-center '>
-        <button className='text-white hover:text-purple-200 transition-all bg-blue-500 px-4 py-2 border-0 rounded-lg text-sm shadow-xs' onClick={() => {handleNavigate()}}>Get started</button>
+        <button className='text-white hover:text-purple-200 transition-all bg-blue-500 px-4 py-2 border-0 rounded-lg text-sm shadow-xs' onClick={() => {handleAuth()}}>Get started</button>
         <div className='flex gap-1 text-sm text-slate-300'>
             Pricing
             <ArrowForwardIcon
